@@ -1,27 +1,27 @@
 class Cli
 
   def call
-    puts "Welcome to Aether Apparel"
-    binding.pry
+    puts "Welcome to  Gleenwood"
     menu
   end
 
   def menu
-    puts "Welcome! List all new Men's styles on Aether Apparel? 1 for Yes and 2 for No."
+    puts "List all apartments on Gleenwood? 1 for Yes and 2 for No."
       input = gets.strip
       if input.to_i == 1
-        list_clothing
+        list_apartments
       elsif input.to_i == 2
-      list_clothing[0]
+       puts "Goodbye"
       else
-        return "Please re-launch CLI and enter 1 for Yes and 2 for No. Goodbye!"
+        puts "Please re-launch CLI and enter 1 for Yes and 2 for No. Goodbye!"
       end
   end
 
 
-      def list_clothing
-        @stlyles.each do |style, price|
-          puts "#{style}, #{price}"
+      def list_apartments
+      #  Apartment.all.each do |apt|
+      Scraper.scraped_products.each do |apt|
+          puts "#{apt}"
         end
       end
 end
