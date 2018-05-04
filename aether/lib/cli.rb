@@ -6,13 +6,15 @@ class Cli
   end
 
   def menu
-      puts "Please select the apartment you would like more info on Gleenwood? Type the corresponding number."
+    #  puts "Please select the apartment you would like more info on Gleenwood? Type the corresponding number."
       #list apartment
-        input = gets.strip
-        if input.to_i = 1-10
+      Scraper.scraped_products
+      #  input = gets.strip
+      #  if input.to_i = 1-10
 
-      else
-        puts "Please re-launch CLI and enter 1 for Yes and 2 for No. Goodbye!"
-      end
+    #  else
+    #    puts "Please re-launch CLI and enter 1 for Yes and 2 for No. Goodbye!"
+    #  end
   end
+
 end

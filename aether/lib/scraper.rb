@@ -7,10 +7,12 @@ require_relative './apartment.rb'
 class Scraper
 
   def self.get_page
-    doc = Nokogiri::HTML(open("https://www.glenwoodnyc.com/"))
+  #  doc = Nokogiri::HTML(open("https://www.glenwoodnyc.com/"))
+  doc = Nokogiri::HTML(open("https://www.calibernyc.com/nyc-rentals"))
     binding.pry
-    doc = doc.css("div.new-featured-l div.col-sm-12 div.guide_box_fa.pagination_list")
-    doc
+  #  doc = doc.css("div.new-featured-l div.col-sm-12 div.guide_box_fa.pagination_list")
+    doc = doc.css("div.wide-column")
+
   end
 
   def self.scraped_products
