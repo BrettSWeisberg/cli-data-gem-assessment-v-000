@@ -22,6 +22,6 @@ end
   end
 
   def show_details
-
+    
   end
 end
