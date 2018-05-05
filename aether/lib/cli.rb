@@ -8,7 +8,7 @@ class Cli
   def menu
     #  puts "Please select the apartment you would like more info on Gleenwood? Type the corresponding number."
       #list apartment
-      Scraper.scraped_products
+      Scraper..scraped_products
       #  input = gets.strip
       #  if input.to_i = 1-10
 
