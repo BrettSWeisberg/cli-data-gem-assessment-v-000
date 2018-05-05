@@ -6,8 +6,8 @@ class Cli
   end
 
   def menu
-      #apartment.list
-      Scraper.scraped_products
+      Apartment.list
+
       #  input = gets.strip
       #  if input.to_i = 1
       #

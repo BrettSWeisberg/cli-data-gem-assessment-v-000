@@ -7,6 +7,7 @@ attr_reader :link
 
   def initialize
     @@all << self
+    binding.pry
   end
 end
 
@@ -22,6 +23,6 @@ end
   end
 
   def show_details
-    
+
   end
 end
