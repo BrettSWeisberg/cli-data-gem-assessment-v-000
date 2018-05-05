@@ -1,20 +1,26 @@
 class Cli
 
+  attr_reader :input
+
   def call
+    puts "Welcome!"
+    Apartment.initialize
     puts "Please select an apartment to see more info by type in the corresponding number."
     menu
   end
 
   def menu
-      Apartment.list
+    show_apartments = Apartment.list
+  end
 
-      #  input = gets.strip
-      #  if input.to_i = 1
-      #
+  def selected_apartment_info
+    input = gets.strip
+    selected_apartment = Apartment.find(@input)
 
-    #  else
-    #    puts "Please re-launch CLI and enter 1 for Yes and 2 for No. Goodbye!"
-    #  end
+    if Apartment.find(@input) == nil
+       puts "Please re-launch CLI and enter corresponding number . Goodbye!"
+    else selected_apartment
+    end
   end
 
 end

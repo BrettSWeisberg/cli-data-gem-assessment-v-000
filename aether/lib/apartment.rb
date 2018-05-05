@@ -5,9 +5,15 @@ attr_reader :link
 
   @@all = []
 
-  def initialize
+  def self.find(input)
+    @@all[input.to_i -1]
+  end
+
+  def initialize(name, link, background)
+    @name = name
+    @link = link
+    @background = background
     @@all << self
-    binding.pry
   end
 end
 
@@ -17,12 +23,8 @@ end
 
   def list
     counter = 1
-    all.each do |apartment|
+    all.each do |apartment|[0]
     puts " #{coutner}. #{apartment}"
     counter += 1
-  end
-
-  def show_details
-
   end
 end

@@ -16,10 +16,10 @@ class Scraper
 
   def self.scraped_products
       self.get_page.each do |element|
-      apartment = Apartment.new
       @name = element.css("a")[0].attribute("title").text
       @link = element.css("a")[0].attribute("href").text
       @background = apartment_background
+      apartment = Apartment.new(@name,@link,@background)
     end
   end
 
