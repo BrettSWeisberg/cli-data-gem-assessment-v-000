@@ -16,8 +16,7 @@ class Scraper
 
   def self.scraped_products
       self.get_page.each do |element|
-        binding.pry
-    #  apartment = Apartment.new
+      apartment = Apartment.new
       @name = element.css("a")[0].attribute("title").text
       @link = element.css("a")[0].attribute("href").text
       @background = apartment_background
@@ -25,8 +24,8 @@ class Scraper
   end
 
   def apartment_background(link)
-    #doc = Nokogiri::HTML(open(link))
-    doc = Nokogiri::HTML(open("https://www.calibernyc.com/queens/house-for-rent/39-14-54-st-1/1273804"))
+    doc = Nokogiri::HTML(open(link))
+    #doc = Nokogiri::HTML(open("https://www.calibernyc.com/queens/house-for-rent/39-14-54-st-1/1273804"))
     doc = doc.css("span.content-full.property-detail-features").text
     puts doc
   end
