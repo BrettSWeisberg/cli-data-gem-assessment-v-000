@@ -21,9 +21,4 @@ class Apartment
     end
   end
 
-    
-
-#  def self.find(input)
-#    @@all[input.to_i-1]
-#  end
 end
