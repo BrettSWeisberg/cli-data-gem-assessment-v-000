@@ -19,7 +19,7 @@ class Cli
     apt_num = input.to_i - 1
 
 
-  #  if   Apartment.all[input.to_i-1] == nil
+   if  Apartment.all[input.to_i-1] != nil
       the_apt_name = Apartment.all[apt_num].name
       the_apt_link = Apartment.all[apt_num].link
       the_apt_background = Apartment.all[apt_num].background
@@ -29,10 +29,10 @@ class Cli
       puts "Background: #{the_apt_background}"
 
 
-  #  else
-  #     puts "Please re-launch CLI and enter corresponding number . Goodbye!"
+   else
+      puts "Please re-launch CLI and enter corresponding number . Goodbye!"
 
-  #  end
+    end
   end
 
 end
