@@ -5,9 +5,9 @@ class Apartment
   @@all = []
 
   def initialize(name, link, background)
+    @background = background
     @name = name
     @link = link
-    @background = background
     @@all << self
   end
 
@@ -16,15 +16,14 @@ class Apartment
   end
 
   def self.list
-    binding.pry
-    
     @@all.each.with_index(1) do |apartment, counter|
-      binding.pry
-      puts " #{coutner}. #{apartment}"
+      puts " #{counter}. #{apartment.name}"
     end
   end
 
-  def self.find(input)
-    @@all[input.to_i-1]
-  end
+    
+
+#  def self.find(input)
+#    @@all[input.to_i-1]
+#  end
 end
