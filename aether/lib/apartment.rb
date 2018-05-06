@@ -1,13 +1,8 @@
 class Apartment
-
-attr_accessor :name, :background
-attr_reader :link
+  attr_accessor :name, :background
+  attr_reader :link
 
   @@all = []
-
-  def self.find(input)
-    @@all[input.to_i -1]
-  end
 
   def initialize(name, link, background)
     @name = name
@@ -15,16 +10,21 @@ attr_reader :link
     @background = background
     @@all << self
   end
-end
 
   def self.all
     @@all
   end
 
-  def list
-    counter = 1
-    all.each do |apartment|[0]
-    puts " #{coutner}. #{apartment}"
-    counter += 1
+  def self.list
+    binding.pry
+    
+    @@all.each.with_index(1) do |apartment, counter|
+      binding.pry
+      puts " #{coutner}. #{apartment}"
+    end
+  end
+
+  def self.find(input)
+    @@all[input.to_i-1]
   end
 end

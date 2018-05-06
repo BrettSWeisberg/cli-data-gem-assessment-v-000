@@ -2,6 +2,6 @@
 
 require_relative "../config/environment"
 
-Cli.new.call
+Cli.call
 
 #ruby bin/run to start CLI

@@ -1,15 +1,15 @@
 class Cli
-
   attr_reader :input
 
-  def call
+  def self.call
+    Scraper.new.scraped_products
     puts "Welcome!"
-    Apartment.initialize
     puts "Please select an apartment to see more info by type in the corresponding number."
-    menu
+
+    self.menu
   end
 
-  def menu
+  def self.menu
     show_apartments = Apartment.list
   end
 
