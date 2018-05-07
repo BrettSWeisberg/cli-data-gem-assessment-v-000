@@ -17,7 +17,7 @@ class Apartment
 
   def self.list
     @@all.each.with_index(1) do |apartment, counter|
-      puts " #{counter}. #{apartment.name}"
+      puts "#{counter}. #{apartment.name}"
     end
   end
 
